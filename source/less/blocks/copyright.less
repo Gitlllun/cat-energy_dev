@@ -1,0 +1,49 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: @gray-two;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    fill: #68b738;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.copyright__logo {
+  margin-right: -6px;
+  width: 40px;
+  height: 40px;
+  fill: @gray;
+}
+
+.copyright:hover .copyright__logo,
+.copyright:focus .copyright__logo {
+  fill: @leaf;
+}
+
+.copyright:active .copyright__logo {
+  fill: @leaf;
+  opacity: 0.3;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin: 0;
+    align-self: center;
+  }
+
+  .copyright__logo {
+    margin-left: 15px;
+  }
+}

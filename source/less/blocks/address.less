@@ -1,0 +1,160 @@
+.address {
+  background-color: @white;
+
+  &--gray {
+    background-color: @white-two;
+  }
+}
+
+.address__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @white;
+  z-index: 3;
+
+  &--gray {
+    background-color: @white-two;
+  }
+}
+
+.address__cooperation {
+  display: block;
+  margin: 27px 0;
+  width: 50%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  color: @black-two;
+  text-transform: uppercase;
+}
+
+.address__text {
+  margin: 27px 0;
+  width: 50%;
+  font-family: "Arial", sans-serif;
+  line-height: 1.43;
+}
+
+.address__map-wrapper {
+  position: relative;
+  margin: 0 auto;
+  background-color: @white-two;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    margin-left: -5px;
+    width: 55px;
+    height: 55px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+}
+
+.address__map {
+  object-fit: cover;
+  height: 400px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  margin-top: -38px;
+}
+
+.address__iframe {
+  position: absolute;
+  z-index: 3;
+  margin-top: -362px;
+  width: 100%;
+  height: 362px;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .address__cooperation {
+    width: 194px;
+    margin: 66px 0 60px 0;
+    padding-left: 42px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .address__text {
+    width: 195px;
+    margin: 64px 0 57px auto;
+    padding-right: 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .address__city {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .address__map-wrapper {
+    &::before {
+      top: 150px;
+      margin-left: -5px;
+      width: 113px;
+      height: 106px;
+      z-index: 1;
+    }
+  }
+
+  .address__map {
+    margin-top: -5px;
+  }
+
+  .address__iframe {
+    height: 400px;
+    margin-top: -400px;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .address {
+    position: relative;
+  }
+
+  .address__container {
+    position: absolute;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 95px;
+    margin-left: -325px;
+    justify-content: stretch;
+    background-color: @white;
+  }
+
+  .address__cooperation {
+    width: 285px;
+    margin: 0;
+    padding: 65px 50px 50px 76px;
+    z-index: 3;
+  }
+
+  .address__text {
+    width: 285px;
+    margin: 0;
+    padding: 63px 85px 58px 40px;
+    text-align: left;
+    z-index: 3;
+  }
+
+  .address__map-wrapper {
+    &::before {
+      margin-left: 335px;
+    }
+  }
+}

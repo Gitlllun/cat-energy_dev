@@ -1,0 +1,30 @@
+.main {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.main__title {
+  margin: 0;
+  padding: 15px 0 29px;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .main__title {
+    padding: 57px 0 25px 0;
+    font-size: 60px;
+    line-height: 1;
+    border: none;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .main__title {
+    padding: 0;
+    margin: 74px 0 0 0;
+  }
+}

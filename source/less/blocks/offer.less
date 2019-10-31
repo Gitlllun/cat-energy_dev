@@ -1,0 +1,167 @@
+.offer {
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    min-width: 320px;
+    width: 100%;
+    height: 305px;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #5eaa2f;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+  }
+}
+
+.offer__title {
+  display: block;
+  padding: 27px 0 0 0;
+  margin: 0 0 25px 0;
+
+  font-size: 36px;
+  font-weight: normal;
+  color: @white;
+
+  text-align: center;
+}
+
+.offer__text {
+  display: block;
+  margin: 0 0 29px 0;
+  padding: 0;
+
+  color: @white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.offer__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.offer__selection {
+  display: inline-block;
+  width: 100%;
+  margin: 3px 0 0 0;
+  padding: 11px 20px;
+
+  line-height: 1.29;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @leaf;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .offer {
+    &::before {
+      display: none;
+    }
+  }
+
+  .offer__container {
+    min-height: 867px;
+  }
+
+  .offer__title {
+    width: 510px;
+    margin: 0 0 41px 0;
+    padding: 57px 0 0 89px;
+
+    font-size: 60px;
+    color: @black-two;
+
+    text-align: left;
+  }
+
+  .offer__text {
+    width: 510px;
+    margin: 0 0 48px 0;
+    padding: 0 0 0 89px;
+
+    font-size: 20px;
+    color: @black-two;
+    text-align: left;
+  }
+
+  .offer__image {
+    position: absolute;
+    width: 708px;
+    margin-top: -28px;
+    z-index: -1;
+  }
+
+  .offer__selection {
+    width: auto;
+    margin: 0 0 0 90px;
+    padding: 14px 26px;
+
+    font-size: 20px;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .offer {
+    &::before {
+      display: block;
+      top: 0;
+      width: 50%;
+      height: 696px;
+      margin-left: 50%;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      border: none;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
+    }
+  }
+
+  .offer__container {
+    position: relative;
+    min-height: 662px;
+  }
+
+  .offer__image {
+    width: 552px;
+    top: 57px;
+    right: 257px;
+  }
+
+  .offer__title {
+    padding-top: 107px;
+    padding-left: 80px;
+  }
+
+  .offer__text {
+    padding-left: 80px;
+    margin-bottom: 53px;
+  }
+
+  .offer__selection {
+    margin-left: 80px;
+  }
+}
